@@ -1,0 +1,37 @@
+args:
+    model: 'models_segmentation_cd/25_09-11_22/'
+    mode: video
+    debug: false
+    align: true
+    display: false
+    save_results: false
+    fore_path: '/home/visiona1/Video/DJI_0019_1080.MOV'
+    back_path: '/home/visiona1/Video/DJI_0021_1080.MOV'
+
+img:
+    model_input: 64
+    width: null
+    height: null
+    max_width: 1920
+    max_height: 1088
+    # Pixels removed from each part of the image
+    cut_top: 0
+    cut_bot: 0
+    cut_left: 0
+    cut_right: 0
+    # Sliding window parameters
+    step: 1 # Sliding window step
+    threshold: 128  # threshold to detections. [0, 255]
+
+record:
+    video_name_list: 
+    - change_img
+    - boxes_img
+    - predict_img
+    fps: 5
+    
+
+video_queues:
+    queue_size: 5
+    fps: 3
+
